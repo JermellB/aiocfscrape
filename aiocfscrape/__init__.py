@@ -7,10 +7,10 @@ import asyncio
 import copy
 import js2py
 import logging
-import random
 import re
 import ssl
 import time
+import secrets
 
 USER_AGENTS = [
     "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36",
@@ -45,7 +45,7 @@ USER_AGENTS = [
     "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.79 Safari/537.36"
 ]
 
-DEFAULT_USER_AGENT = random.choice(USER_AGENTS)
+DEFAULT_USER_AGENT = secrets.SystemRandom().choice(USER_AGENTS)
 
 DEFAULT_HEADERS = OrderedDict(
     (
