@@ -291,7 +291,7 @@ class CloudflareScraper(aiohttp.ClientSession):
         try:
             result = js2py.eval_js(js)
         except Exception:
-            logging.error('Error executing Cloudflare IUAM Javascript. %s' % BUG_REPORT)
+            logging.error('Error executing Cloudflare IUAM Javascript. %s', BUG_REPORT)
             raise
 
         try:
